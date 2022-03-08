@@ -1,0 +1,6 @@
+<div class="main">
+  <app-student-add></app-student-add>
+  <app-student-edit [studentId]="studentEditId"></app-student-edit>
+  <app-student-details [studentId]="studentDetailId"></app-student-details>
+  <app-student-list (studentEditId)="editIdPass($event)" (studentDetailId)="detailsIdPass($event)"></app-student-list>
+</div>
