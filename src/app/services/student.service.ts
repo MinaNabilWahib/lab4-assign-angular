@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Student } from '../_models/student';
 
@@ -6,7 +6,7 @@ import { Student } from '../_models/student';
   providedIn: 'root',
 })
 export class StudentService {
-  baseurl: string = 'http://localhost:8080/students/';
+  // baseurl: string = 'http://localhost:8080/students/';
 
   getAllStudents() {
     return this.http.get<Student[]>(this.baseurl);
@@ -23,6 +23,14 @@ export class StudentService {
   updateStudent(student: Student) {
     return this.http.put<Student>(this.baseurl, student);
   }
+  deleteStudent(id: number) {
+    return this.http.delete<Student>(this.baseurl);
+  }
 
-  constructor(public http: HttpClient) {}
+  constructor(
+    public http: HttpClient,
+    @Inject('baseUrl') public baseurl: string
+  ) {
+    this.baseurl += 'students/';
+  }
 }

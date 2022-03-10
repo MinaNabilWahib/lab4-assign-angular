@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col">
+    <input type="checkbox" [(ngModel)]="user.isAdmin">
+    <label>isAdmin</label>
+  </div>
+  <div class="col">
+    <input type="text" [(ngModel)]="user.userName" placeholder="User Name">
+  </div>
+  <div class="col">
+    <input type="text" [(ngModel)]="user.email" placeholder="Email">
+  </div>
+  <div class="col">
+    <input type="text" [(ngModel)]="user.password" placeholder="Password">
+  </div>
+  <div class="col">
+    <button class="btn btn-primary" (click)="login()">Login</button>
+  </div>
+<div class="row">

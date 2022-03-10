@@ -5,6 +5,7 @@ import { StudentEditComponent } from './student-edit/student-edit.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { FormsModule } from '@angular/forms';
+import { StudentHomeComponent } from './student-home/student-home.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { FormsModule } from '@angular/forms';
     StudentEditComponent,
     StudentDetailsComponent,
     StudentListComponent,
+    StudentHomeComponent,
   ],
   imports: [CommonModule, FormsModule],
   exports: [
